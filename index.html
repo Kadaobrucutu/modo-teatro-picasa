@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modo Teatro - Estilo Picasa</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="gallery">
+    <img src="https://picsum.photos/id/1/600/400" alt="Foto 1" onclick="openTheater(0)">
+    <img src="https://picsum.photos/id/2/600/400" alt="Foto 2" onclick="openTheater(1)">
+    <img src="https://picsum.photos/id/3/600/400" alt="Foto 3" onclick="openTheater(2)">
+    <img src="https://picsum.photos/id/4/600/400" alt="Foto 4" onclick="openTheater(3)">
+    <img src="https://picsum.photos/id/5/600/400" alt="Foto 5" onclick="openTheater(4)">
+  </div>
+
+  <div id="theater" onclick="closeTheater()">
+    <div class="theater-content" onclick="event.stopPropagation();">
+      <button class="close-btn" onclick="closeTheater()">×</button>
+      <button class="nav prev" onclick="prevImage()">❮</button>
+      <img id="theater-img" src="" onwheel="zoom(event)" />
+      <button class="nav next" onclick="nextImage()">❯</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
